@@ -1,4 +1,5 @@
 #{raw js('test')}
+#{raw css('test')}
 <div class="welcome">
   Hello World
 </div>

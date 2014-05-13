@@ -41,7 +41,8 @@
     "nodemon": "~1.0",
     "express": "~4.2.0",
     "toffee": "~0.1.8",
-    "connect": "~2.15"
+    "node-sass": "~0.8.6",
+    "connect-assets": "~3.0.0"
   },
   "dependencies": {}
 }
