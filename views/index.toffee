@@ -1,0 +1,4 @@
+#{raw js('test')}
+<div class="welcome">
+  Hello World
+</div>
