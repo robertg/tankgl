@@ -29,6 +29,12 @@ To build simply:
   $ grunt build
 ```
 
+###Linting
+To lint simply:
+```bash
+  $ grunt lint
+```
+
 ## License
 
 GPLv3
