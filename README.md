@@ -38,10 +38,10 @@ To lint simply:
 ###Robert's current workflow
 Run the following in two seperate terminals
 ```bash
-grunt watch
+  $ grunt watch
 ```
 ```bash
-npm run start_and_watch
+  $ npm run start_and_watch
 ```
 ## License
 
