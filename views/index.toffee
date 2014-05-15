@@ -1,5 +1,9 @@
-#{raw js('test')}
-#{raw css('test')}
-<div class="welcome">
-  Hello World
-</div>
+<html>
+  <title>tankgl</title>
+  <body>
+    <div id="game"></div>
+    #{raw js('vendor/three.min')}
+    #{raw js('tankgl')}
+    #{raw css('index')}
+</body>
+</html>
