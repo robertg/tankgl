@@ -37,7 +37,7 @@ onload = ->
 loader = new THREE.JSONLoader()
 loader.load("/game/model/tank_top.js", (geometry) =>
   @top_geo = geometry;
-  loader.load("/assets/game/model/tank_bottom.js", (geometry) =>
+  loader.load("/game/model/tank_bottom.js", (geometry) =>
     @bottom_geo = geometry;
     onload()
   )

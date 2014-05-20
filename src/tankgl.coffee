@@ -1,9 +1,12 @@
 express = require 'express'
+
 app = express()
 app.set 'view engine', 'toffee'
-app.use(express.static(__dirname + '/public'))
+#Make sure to serve everything in /../ since this file is run in dist/.
+app.use(express.static(__dirname + '/../public'))
 
 app.use (require 'connect-assets')()
+
 app.listen (process.env.PORT || 3000)
 
 #Routes:
