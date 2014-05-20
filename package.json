@@ -8,14 +8,16 @@
     "url": "https://github.com/rgawdzik/tankgl.git"
   },
   "scripts": {
-    "test" : "grunt test",
+    "test": "grunt test",
     "prepublish": "grunt build",
     "start_and_watch": "nodemon dist/tankgl.js"
   },
   "config": {
     "blanket": {
       "loader": "./node-loaders/coffee-script",
-      "data-cover-only": [ "src" ],
+      "data-cover-only": [
+        "src"
+      ],
       "data-cover-never": "node_modules"
     }
   },
@@ -41,8 +43,10 @@
     "nodemon": "~1.0",
     "express": "~4.2.0",
     "toffee": "~0.1.8",
-    "node-sass": "~0.8.6",
-    "connect-assets": "~3.0.0"
+    "node-sass": "~0.8.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ws": "^0.4.31",
+    "connect-assets": "^3.0.1"
+  }
 }
