@@ -3,6 +3,7 @@
   <body>
     <div id="game"></div>
     #{raw js('vendor/three.min')}
+    #{raw js('vendor/OrbitControls')})
     #{raw js('tankgl')}
     #{raw css('index')}
   </body>

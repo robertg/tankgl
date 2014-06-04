@@ -2,7 +2,7 @@ express = require 'express'
 
 app = express()
 app.set 'view engine', 'toffee'
-#Make sure to serve everything in /../ since this file is run in dist/.
+#Make sure to serve everything in /../ since this file is run in the dist/ folder.
 app.use(express.static(__dirname + '/../public'))
 
 app.use (require 'connect-assets')()

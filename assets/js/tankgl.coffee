@@ -1,6 +1,8 @@
 scene = new THREE.Scene
 camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
+camera.position.z = 5;
 
+scene.add camera
 renderer = new THREE.WebGLRenderer
 renderer.setSize( window.innerWidth, window.innerHeight )
 document.getElementById('game').appendChild( renderer.domElement )
@@ -14,7 +16,17 @@ socket.binaryType = "arraybuffer"
 socket.onopen = -> console.log "connected"
 socket.onmessage = (e) ->
   view = new DataView(e.data)
-  console.log view.getFloat32(i*4,false) for i in [0 ... 5]
+  #console.log view.getFloat32(i*4,false) for i in [0 ... 5]
+
+animate = ->
+  requestAnimationFrame( animate )
+  controls.update()
+
+render = ->
+  renderer.render( scene, camera )
+
+controls = new THREE.OrbitControls( camera )
+controls.addEventListener( 'change', render )
 
 
 onload = ->
@@ -40,5 +52,6 @@ loader.load("/game/model/tank_top.js", (geometry) =>
   loader.load("/game/model/tank_bottom.js", (geometry) =>
     @bottom_geo = geometry;
     onload()
+    console.log "loaded"
   )
 )
