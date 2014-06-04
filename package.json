@@ -10,7 +10,7 @@
   "scripts": {
     "test": "grunt test",
     "prepublish": "grunt build",
-    "start_and_watch": "nodemon dist/tankgl.js"
+    "start_and_watch": "nodemon --watch dist/tankgl.js"
   },
   "config": {
     "blanket": {
