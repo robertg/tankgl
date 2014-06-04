@@ -18,7 +18,6 @@ app.get '/', (req, res) ->
   res.render 'index.toffee', view_payload
 #=====================================================
 
-
 #Open up websocket:
 WebSocket = require('ws')
 
@@ -29,3 +28,13 @@ wss.on('connection', (s) ->
   array[i] = i / 2 for i in [0..array.length]
   s.send(array, {binary: true})
 )
+
+#BEGIN GAME
+ping_pong = =>
+  'ping pong'
+
+game_loop = =>
+  'tick'
+
+setInterval game_loop, 17
+setInterval ping_pong, 10000
