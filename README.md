@@ -46,8 +46,12 @@ Run the following in two seperate terminals
 
 ###Project Structure
 assets/ - Anything that needs to be precompiled, or is vendor.
+
 public/ - Anything that is game asset goes here
+
 src/ - our node.js server side code.
+
 test/ - our "testing-suite"
+
 views/ - our front-end views that get compiled into html
 
